@@ -14,6 +14,7 @@ A demo to bypass windows 10 **default** UAC configuration using IFileOperation a
 
 #Known issues
 - a fake ntwdblib.dll will be copied to C:\Windows\System32\. Any program tries to load this dll will launch cmd.exe and exit itself. **You should remove this file manually after trying the bypass**
-- explorer.exe will load UacBypass.dll and cannot unload it. Restart the Windows Explorer process can solve this problem.
+- explorer.exe will load UacBypass.dll and cannot unload it. Restart the Windows Explorer process can solve this problem.  
+- Microsoft seems to have fixed all the known dll hijack exploits on Windows 10 version 1607 including what this project uses(ntwdblib.dll), so the bypass will fail on any later versions.
 
 Chinese introduction: https://hjc.im/bypass-win10-uac/
